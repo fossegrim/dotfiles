@@ -1,0 +1,92 @@
+sticky yes
+snapdist 4
+fontname "fixed:pixelsize=13:style=semicondensed"
+unbind-key all
+
+# key-bindings
+bind-key 4-Return terminal
+bind-key 4-BackSpace window-hide
+bind-key 4-Down window-lower
+bind-key 4-Up window-raise
+bind-key 4-Tab window-cycle
+bind-key M-Tab window-cycle
+bind-key 4S-Tab window-rcycle
+bind-key MS-Tab window-rcycle
+bind-key 4S-q window-delete
+bind-key 4-n window-menu-label
+
+# mod + $N = show only windows for group $N
+bind-key 4-1 group-only-1
+bind-key 4-2 group-only-2
+bind-key 4-3 group-only-3
+bind-key 4-4 group-only-4
+bind-key 4-5 group-only-5
+bind-key 4-6 group-only-6
+bind-key 4-7 group-only-7
+bind-key 4-8 group-only-8
+bind-key 4-9 group-only-9
+
+# mod + shift +$N = move window to group $N
+bind-key 4S-1 window-movetogroup-1
+bind-key 4S-2 window-movetogroup-2
+bind-key 4S-3 window-movetogroup-3
+bind-key 4S-4 window-movetogroup-4
+bind-key 4S-5 window-movetogroup-5
+bind-key 4S-6 window-movetogroup-6
+bind-key 4S-7 window-movetogroup-7
+bind-key 4S-8 window-movetogroup-8
+bind-key 4S-9 window-movetogroup-9
+
+bind-key 4-a group-toggle-all
+bind-key 4-g window-group
+bind-key 4-Right group-cycle
+bind-key 4-Left group-rcycle
+bind-key 4-s window-stick
+
+bind-key 4-f window-fullscreen
+bind-key 4-m window-maximize
+bind-key 4-equal window-vmaximize
+bind-key 4S-equal window-hmaximize
+
+# mod + H,J,K,L = resize window left, down, up, right by 10 pixels
+bind-key 4-h window-resize-left
+bind-key 4-j window-resize-down
+bind-key 4-k window-resize-up
+bind-key 4-l window-resize-right
+
+# mod + shift + H,J,K,L = resize window left, down, up, right by more than 10 pixels
+bind-key 4S-h window-resize-left-big
+bind-key 4S-j window-resize-down-big
+bind-key 4S-k window-resize-up-big
+bind-key 4S-l window-resize-right-big
+
+bind-key 4-v window-vtile
+bind-key 4-c window-htile
+
+bind-key 4-slash menu-window
+bind-key 4-d menu-cmd
+bind-key 4-question menu-exec
+bind-key 4-period menu-ssh
+
+bind-key 4S-r restart
+bind-key 4S-e quit
+
+# unbind default mouse actions
+unbind-mouse M-1
+unbind-mouse CM-1
+unbind-mouse M-2
+unbind-mouse M-3
+unbind-mouse CMS-3
+
+# mouse bindings
+bind-mouse 4-1 window-move
+bind-mouse 4-3 window-resize
+bind-mouse 4-2 window-lower
+bind-mouse 4S-2 window-hide
+
+# command menu
+command xterm  xterm
+command chrome "chrome --enable-unveil"
+command xcalc  xcalc
+command emacs emacs
+command zahtura zathura
