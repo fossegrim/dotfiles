@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: no return
+# key: nr
+# --
+cout << "NO";
+return 0;

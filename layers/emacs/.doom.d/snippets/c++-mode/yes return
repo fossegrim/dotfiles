@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: yes return
+# key: yr
+# --
+cout << "YES";
+return 0;
