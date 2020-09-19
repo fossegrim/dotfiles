@@ -3,11 +3,11 @@
 # ------------------------------------------------------------------------------
 # Run hub if it is in $PATH otherwise run git
 #
-function hub-is-in-path {
+hub_is_in_path() {
 	which hub > /dev/null 2>&1
 }
 
-if hub-is-in-path; then
+if hub_is_in_path; then
 	hub "$@"
 else
 	git "$@"
