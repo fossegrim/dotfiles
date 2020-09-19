@@ -1,7 +1,106 @@
-[include]
-	path = alias
-	path = user # This contains user data and is therefore not version controlled
+[alias]
+	commits-since = rev-list --count HEAD --since 
+	contributors = shortlog -s -n --all --no-merges
+	aliases = config --get-regexp ^alias
+	push-set-upstream-to-remote-branch = ! git push --set-upstream origin "$(git branch --show-current)"
+	psutrb = push-set-upstream-to-remote-branch
+	tree = lgdo
+	ls = ls-files
+	root = rev-parse --show-toplevel
+
+	# The following commands shall use the following form
+	# [lowercase head character in command or flag]*
+        # [a]dd
+        a = add
+	ah = add --help
+
+	aa = add --all
+        ap = add --patch
+
+        # [b]ranch
+        b = branch
+        bh = branch --help
+
+	ba = branch --all
+	bd = branch --delete
+	br = branch --remote
+	bm = branch --move
+
+        # [c]ommit
+        c = commit
+        ch = commit --help
+
+        ca = commit --amend
+        cm = commit --message
+        cam = commit --amend --message
+
+        # [d]iff
+        d = diff
+        dh = diff --help
+
+        ds = diff --staged
+
+	# r[e]mote
+	e = remote
+	e = remote --help
+
+	eso = remote set-url origin
+
+	# [l]og
+	l = log
+	lh = log --help
+
+	lp = log --patch
+	lpf = log --patch --follow # View history of file including renames
+	lgdo = log --graph --decorate --oneline
+
+	# check[o]ut
+	o = checkout
+	oh = checkout --help
+
+	ob = checkout -b
+	oo = checkout --orphan # Creates branch with no parent commit
+
+        # [p]ush
+        p = push
+        ph = push --help
+
+	pf = push --force
+	pd = push --delete # Used for deleting remote tags
+        pot = push origin tag # "push origin" by itself also works, but this is more explicit
+        pod = push origin --delete # Useful for deleting remote branches
+	phm = push heroku master
+	psom = push --set-upstream origin master
+
+        # [r]estore
+        r = restore
+        rh = restore --help
+
+        rs = restore --staged
+
+        # [s]tatus
+        s = status
+        sh = status --help
+
+        # [t]ag
+        t = ! echo "This alias is disabled to facilitate getting used to the annotated tag workflow. Use tl for listing tags and ta, tam and tame for tagging."
+        th = tag --help
+
+	tl = tag --list
+	td = tag --delete
+	ta = tag --annotate
+	tam = tag --annotate --message
+	tame = tag --annotate --message '' # e for empty message
+
+	# [i]nit
+	i = init
+	ih = init --help
 [core]
 	editor = vi
+[include]
+	path = alias
 [push]
 	followTags = true
+[user]
+	name = Olav Fosse
+	email = fosseolav@gmail.com
