@@ -21,3 +21,4 @@ set -o emacs
 export PAGER=less
 export FCEDIT="$EDITOR"
 export PS1='$ '
+export LAYERS="$HOME/Git/layered-dotfiles/layers"
