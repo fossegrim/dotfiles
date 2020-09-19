@@ -1,3 +1,6 @@
+# Load git configuration if the layer is in use
+test -f ~/.config/git/shell-configuration && . ~/.config/git/shell-configuration
+
 # All the variables set here are documented in KSH(1)
 HISTFILE=$HOME/.ksh_history
 HISTSIZE=20000
