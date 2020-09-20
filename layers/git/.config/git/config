@@ -46,6 +46,14 @@
 
 	eso = remote set-url origin
 
+	# [f] - rebase
+	f = rebase
+	fh = rebase --help
+
+	fi = rebase --interactive
+	fir = rebase --interactive --root
+	fc = rebase --continue
+
 	# [l]og
 	l = log
 	lh = log --help
