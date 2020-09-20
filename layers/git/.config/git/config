@@ -45,6 +45,7 @@
 	eh = remote --help
 
 	eso = remote set-url origin
+	rao = remote add origin
 
 	# [f] - rebase
 	f = rebase
