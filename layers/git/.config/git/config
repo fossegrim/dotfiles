@@ -42,7 +42,7 @@
 
 	# r[e]mote
 	e = remote
-	e = remote --help
+	eh = remote --help
 
 	eso = remote set-url origin
 
