@@ -29,9 +29,13 @@
         c = commit
         ch = commit --help
 
+	cp = commit --patch
         ca = commit --amend
+	cap = commit --amend --patch
         cm = commit --message
+        cmp = commit --message -patch
         cam = commit --amend --message
+        camp = commit --amend --message
 
         # [d]iff
         d = diff
@@ -84,7 +88,9 @@
         r = restore
         rh = restore --help
 
+	rp = restore --patch
         rs = restore --staged
+        rsp = restore --staged --patch
 
         # [s]tatus
         s = status
