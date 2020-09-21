@@ -41,6 +41,7 @@
         d = diff
         dh = diff --help
 
+	dh = diff HEAD~
 	dw = diff --word-diff
         ds = diff --staged
         dsw = diff --staged --word-diff
