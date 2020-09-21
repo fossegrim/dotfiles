@@ -41,7 +41,9 @@
         d = diff
         dh = diff --help
 
+	dw = diff --word-diff
         ds = diff --staged
+        dsw = diff --staged --word-diff
 
 	# r[e]mote
 	e = remote
