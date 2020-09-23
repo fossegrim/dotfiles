@@ -64,6 +64,7 @@
 	fir = rebase --interactive --root
 	fira = rebase --interactive --root --autostash
 	fc = rebase --continue
+	fs = rebase --skip
 
 	# [l]og
 	l = log
