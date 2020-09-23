@@ -58,6 +58,7 @@
 	fh = rebase --help
 
 	fa = rebase --autostash
+	fe = rebase --edit-todo
 	fi = rebase --interactive
 	fia = rebase --interactive --autostash
 	fir = rebase --interactive --root
