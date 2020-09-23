@@ -94,6 +94,7 @@
 
 	pf = push --force
 	pd = push --delete # Used for deleting remote tags
+	po = push origin
         pot = push origin tag # "push origin" by itself also works, but this is more explicit
         pod = push origin --delete # Useful for deleting remote branches
 	phm = push heroku master
