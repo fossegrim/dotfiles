@@ -57,8 +57,11 @@
 	f = rebase
 	fh = rebase --help
 
+	fa = rebase --autostash
 	fi = rebase --interactive
+	fia = rebase --interactive --autostash
 	fir = rebase --interactive --root
+	fira = rebase --interactive --root --autostash
 	fc = rebase --continue
 
 	# [l]og
