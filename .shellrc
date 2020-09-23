@@ -1,0 +1,27 @@
+# ---PATH---
+# ~/bin is for binaries
+# ~/sh is for scripts
+export PATH="$HOME/sh:$HOME/bin:$PATH"
+
+# ---EDITOR---
+export EDITOR=vi
+
+# ---PS1---
+export PS1='$ '
+
+# ---History---
+is-ksh && HISTFILE=$HOME/.ksh_history
+is-zsh && HISTFILE=$HOME/.zsh_history
+HISTSIZE=20000
+
+# ---Aliases---
+is-ksh && alias ..='cd ..'
+
+alias ..g='cd "$(git rev-parse --show-toplevel)"'
+alias p=pwd
+alias c=cd
+alias g=git-or-hub
+alias m='mkdir -p'
+alias r='rm -d'
+alias v="$EDITOR"
+alias l="ls -a"
