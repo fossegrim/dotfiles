@@ -66,6 +66,13 @@
 	fc = rebase --continue
 	fs = rebase --skip
 
+	# stas[h]
+	h = stash
+	hh = stash --help
+
+	ha = stash apply
+	hl = stash list
+
 	# [l]og
 	l = log
 	lh = log --help
