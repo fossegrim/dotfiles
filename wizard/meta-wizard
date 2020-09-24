@@ -1,0 +1,29 @@
+#!/bin/sh
+# Set up the system
+#
+# This script assumes that the repository is succesfully cloned to $HOME.
+
+cd || exit
+
+git config status.showUntrackedFiles no
+
+while true; do
+	printf 'Do you wish to configure github authentication (yes/no)? '
+	read -r yesno
+	case "$yesno" in
+		yes)
+			./wizard/github-wizard
+			break
+			;;
+		no)
+			break
+			;;
+	esac
+done
+
+case "$(uname)" in
+	OpenBSD)
+		rm .profile
+		ln -s .profile.openbsd .profile
+		;;
+esac
