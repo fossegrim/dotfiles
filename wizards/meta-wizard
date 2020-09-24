@@ -3,23 +3,52 @@
 #
 # This script assumes that the repository is succesfully cloned to $HOME.
 
-cd || exit
+# ---Helpers---
+prompt() {
+	prompt="$1"
+	if_yes="$2"
+
+	while true; do
+		printf '%s' "$prompt"
+		read -r yesno
+		case "$yesno" in
+			yes)
+				"$if_yes"
+				break
+				;;
+			no)
+				break
+				;;
+		esac
+	done
+}
+
+run_wizard() {
+	wizard="$1"
+
+	printf 'Running %s\n' "$wizard"
+	if "$wizard"; then
+		printf '%s succeeded\n' "$wizard"
+	else
+		printf '%s failed\n' "$wizard"
+		printf 'Running %s\n' "$(basename "$SHELL")"
+		printf 'Run exit to continue'
+		"$SHELL"
+	fi
+}
+
+wizard_prompt() {
+	wizard="$1"
+
+	prompt "$(printf 'Do you wish to run %s (yes/no)? ' "$wizard")" "$wizard"
+}
+
+# ---Entry point---
+cd || exit 1
 
 git config status.showUntrackedFiles no
 
-while true; do
-	printf 'Do you wish to configure github authentication (yes/no)? '
-	read -r yesno
-	case "$yesno" in
-		yes)
-			./wizards/github-wizard
-			break
-			;;
-		no)
-			break
-			;;
-	esac
-done
+wizard_prompt './wizards/github-wizard'
 
 case "$(uname)" in
 	OpenBSD)

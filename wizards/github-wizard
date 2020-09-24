@@ -20,4 +20,4 @@ cat ~/.ssh/id_rsa.pub
 printf 'Press return to continue'
 read -r
 
-ssh -T git@github.com
+ssh -T git@github.com || exit 1
