@@ -4,7 +4,7 @@
 # This script assumes that the repository is succesfully cloned to $HOME.
 
 # ---Helpers---
-prompt() {
+yesno_prompt() {
 	prompt="$1"
 	if_yes="$2"
 
@@ -13,7 +13,7 @@ prompt() {
 		read -r yesno
 		case "$yesno" in
 			yes)
-				"$if_yes"
+				$if_yes
 				break
 				;;
 			no)
@@ -23,32 +23,12 @@ prompt() {
 	done
 }
 
-run_wizard() {
-	wizard="$1"
-
-	printf 'Running %s\n' "$wizard"
-	if "$wizard"; then
-		printf '%s succeeded\n' "$wizard"
-	else
-		printf '%s failed\n' "$wizard"
-		printf 'Running %s\n' "$(basename "$SHELL")"
-		printf 'Run exit to continue'
-		"$SHELL"
-	fi
-}
-
-wizard_prompt() {
-	wizard="$1"
-
-	prompt "$(printf 'Do you wish to run %s (yes/no)? ' "$wizard")" "$wizard"
-}
-
 # ---Entry point---
 cd || exit 1
 
 git config status.showUntrackedFiles no
 
-wizard_prompt './wizards/github-wizard'
+yesno_prompt 'Do you wish to configure github ssh key authentication(yes/no)?' './wizards/github-wizard'
 
 case "$(uname)" in
 	OpenBSD)
