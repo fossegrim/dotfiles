@@ -33,8 +33,9 @@ export EDITOR=vi
 is-ksh && set -o emacs
 is-ksh && export FCEDIT="$EDITOR"
 
-# ---PS1---
+# ---PSX---
 export PS1='$ '
+export PS2=''
 
 # ---History---
 is-ksh && HISTFILE=$HOME/.ksh_history
