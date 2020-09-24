@@ -1,8 +1,6 @@
 #!/bin/sh
-# Synopsis
-# ------------------------------------------------------------------------------
-# Run hub if it is in $PATH otherwise run git
-#
+# Run hub if it is in PATH otherwise run git
+
 hub_is_in_path() {
 	which hub > /dev/null 2>&1
 }

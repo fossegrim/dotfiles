@@ -1,12 +1,4 @@
-/*
- * Synopsis
- * -----------------------------------------------------------------------------
- * Print human readable error of errno argument
- *
- * Usage
- * -----------------------------------------------------------------------------
- * errno errno
- */
+// Print human readable error of errno argument
 
 #include <stdio.h>
 #include <string.h>

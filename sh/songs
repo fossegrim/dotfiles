@@ -1,5 +1,6 @@
 #!/bin/sh
 # Download and play all OpenBSD release songs as of 2020-08-09
+
 download() {
 	if which ftp > /dev/null; then
 		ftp "$1" # In OpenBSD base
