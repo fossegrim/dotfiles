@@ -12,7 +12,7 @@ while true; do
 	read -r yesno
 	case "$yesno" in
 		yes)
-			./wizard/github-wizard
+			./wizards/github-wizard
 			break
 			;;
 		no)
