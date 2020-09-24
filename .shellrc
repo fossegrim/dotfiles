@@ -1,3 +1,26 @@
+# ---Aliases and functions---
+alias is-ksh='[ "$0" = ksh ]' # maybe escape
+alias is-zsh='[ "$0" = zsh ]' # maybe escape
+alias is-openbsd='[ "$(uname)" = OpenBSD ]'
+alias is-darwin='[ "$(uname)" = Darwin ]'
+
+is-ksh && alias ..='cd ..'
+
+alias ..g='cd "$(git rev-parse --show-toplevel)"'
+alias p=pwd
+alias c=cd
+alias g=git-or-hub
+alias m='mkdir -p'
+alias r='rm -d'
+alias v="$EDITOR"
+alias l="ls -a"
+
+alias un-tar-gz='tar -xzf'
+
+compile() { clang -std=c17 -Wall -Wextra -pedantic "$@"; }
+irc() { tmux new-session -A -s irc; }
+pdf() { zathura "$@" &> /dev/null; }
+
 # ---PATH---
 # ~/bin is for binaries
 # ~/sh is for scripts
@@ -13,15 +36,3 @@ export PS1='$ '
 is-ksh && HISTFILE=$HOME/.ksh_history
 is-zsh && HISTFILE=$HOME/.zsh_history
 HISTSIZE=20000
-
-# ---Aliases---
-is-ksh && alias ..='cd ..'
-
-alias ..g='cd "$(git rev-parse --show-toplevel)"'
-alias p=pwd
-alias c=cd
-alias g=git-or-hub
-alias m='mkdir -p'
-alias r='rm -d'
-alias v="$EDITOR"
-alias l="ls -a"

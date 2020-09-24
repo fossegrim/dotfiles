@@ -1,5 +1,0 @@
-#!/bin/sh
-# Synopsis
-# ------------------------------------------------------------------------------
-# Open a pdf in the background 
-nohup zathura "$1" > /dev/null &
