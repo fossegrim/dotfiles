@@ -27,7 +27,11 @@ pdf() { zathura "$@" &> /dev/null; }
 export PATH="$HOME/sh:$HOME/bin:$PATH"
 
 # ---EDITOR---
+# Setting EDITOR to vi makes the use vi-mode.
 export EDITOR=vi
+# To prevent this the editor mode is explicitly set to emacs.
+is-ksh && set -o emacs
+is-ksh && export FCEDIT="$EDITOR"
 
 # ---PS1---
 export PS1='$ '
