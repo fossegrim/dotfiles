@@ -6,3 +6,4 @@
    ```sh
    ./wizards/meta-wizard
    ```
+   Alternatively, or if something fails you can run the wizards individually.
