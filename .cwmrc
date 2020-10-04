@@ -40,8 +40,8 @@ bind-key 4-7 group-only-7
 bind-key 4-8 group-only-8
 bind-key 4-9 group-only-9
 
-bind-key 4-f window-fullscreen
-bind-key 4-m window-maximize
+# This is intentionally not window-fullscreen
+bind-key 4-f window-maximize
 
 bind-key 4-v window-vtile
 
