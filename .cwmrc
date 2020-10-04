@@ -18,7 +18,7 @@ unbind-key all
 unbind-mouse all
 
 bind-key 4-Return terminal
-bind-key 4S-l lock
+bind-key 4S-i lock
 bind-key 4-j window-lower
 bind-key 4-k window-raise
 bind-key 4-s menu-window
