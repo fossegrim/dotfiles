@@ -18,5 +18,8 @@ setxkbmap no -option ctrl:nocaps
 # Set TrackPoint acceleration
 xinput set-prop /dev/wsmouse "Device Accel Constant Deceleration" 0.2
 
+# Black background color
+xsetroot -solid black
+
 # Start WM
 exec cwm
