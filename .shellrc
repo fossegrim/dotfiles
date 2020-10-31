@@ -20,6 +20,9 @@ alias un-tar-gz='tar -xzf'
 compile() { clang -std=c17 -Wall -Wextra -pedantic "$@"; }
 pdf() { zathura "$@" &> /dev/null; }
 
+alias qwerty='setxkbmap -layout no'
+alias dvorak='setxkbmap -layout no -variant dvorak'
+
 # ---PATH---
 # ~/bin is for binaries
 # ~/sh is for scripts
