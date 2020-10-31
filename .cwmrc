@@ -6,11 +6,11 @@ sticky yes
 
 # Makes for a really nice master/stack-esque tiling
 vtile 65
+htile 65 # useful for reading books and programming along
 
 # Setting moveamount does not seem to have any effect
 # moveamount 20px
 
-command chrome "chrome --enable-unveil"
 command zathura zathura
 
 # The bindings are listed in /roughly/ the same order as the default bindings list in cwm(1)
@@ -44,6 +44,7 @@ bind-key 4-9 group-only-9
 bind-key 4-f window-maximize
 
 bind-key 4-v window-vtile
+bind-key 4-u window-htile # Random letter because I couldn't think of a mnemonic
 
 bind-key 4-h window-resize-left
 bind-key 4-j window-resize-down
