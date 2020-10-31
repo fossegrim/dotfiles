@@ -60,6 +60,8 @@
 	fa = rebase --autostash
 	fe = rebase --edit-todo
 	fi = rebase --interactive
+	fi5 = rebase --interactive HEAD~5
+	fi10 = rebase --interactive HEAD~10
 	fia = rebase --interactive --autostash
 	fir = rebase --interactive --root
 	fira = rebase --interactive --root --autostash
