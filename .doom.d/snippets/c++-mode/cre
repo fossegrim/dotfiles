@@ -1,5 +1,0 @@
-# -*- mode: snippet -*-
-# name: cre
-# key: cre
-# --
-cout << $0;return 0;

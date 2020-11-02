@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name: for auto
-# key: fa
-# --
-for(auto ${1:x} : ${2:v}) {
-  $0
-}

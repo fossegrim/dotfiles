@@ -1,6 +1,0 @@
-# -*- mode: snippet -*-
-# name: get integer
-# key: gi
-# --
-int ${1:a};
-cin >> $1;

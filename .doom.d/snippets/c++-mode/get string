@@ -1,6 +1,0 @@
-# -*- mode: snippet -*-
-# name: get string
-# key: gs
-# --
-string ${1:s};
-cin >> $1;
