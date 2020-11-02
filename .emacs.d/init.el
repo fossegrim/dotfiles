@@ -24,7 +24,6 @@
   (setq create-lockfiles nil) ; do not create .# files
   )
 
-
 ;; Use left-alt as as meta and right-alt for inputting special characters
 (use-package configure-mac-alt
   :ensure nil
@@ -40,6 +39,24 @@
   :init
   (load-theme 'wombat))
 
+;; Magit
+(use-package magit
+  :ensure t
+  :bind (("s-g" . nil) ; unbind key, so that it can be used as a modifier
+	 ("s-g g" . magit)
+	 ("s-g s" . magit-stage-file)
+	 ("s-g d" . magit-diff-staged)
+	 ("s-g c" . magit-file-checkout)))
+
+;; project.el
+(use-package project.el
+  :ensure nil
+  :bind (("s-p" . nil)
+	 ("s-p f" . project-or-external-find-file)
+	 ("s-p d" . project-or-exernal-find-regexp)
+	 ("s-p r" . project-query-replace-regexp)
+	 ("s-p s" . project-search)))
+
 ;; Configure cc-mode
 (use-package cc-mode
   :ensure nil
@@ -47,14 +64,6 @@
   ;; Use stroustroup / The C Programming Language, 2nd Edition style
   (setq c-default-style '((c-mode . "stroustrup")))
   (setq c-indent-comment-alist '((other . (column . 0)))))
-
-;; Magit
-(use-package magit
-  :ensure t
-  :bind (("C-c c m g" . magit)
-	 ("C-c c m s" . magit-stage))
-  :chords (("Mg" . magit)
-	   ("Ms" . magit-stage)))
 
 ;; eradio
 (use-package eradio
@@ -69,11 +78,11 @@
 				("swing - lainon" . "https://lainon.life/radio/swing.ogg.m3u")
 				("bluemars - eobm" . "http://streams.echoesofbluemars.org:8000/bluemars.m3u")
 				("cryosleep - eobm" . "http://streams.echoesofbluemars.org:8000/cryosleep.m3u")))
-  :bind (("C-c c p" . eradio-play)
-	 ("C-c c s" . eradio-stop))
+  :bind (("s-r p" . eradio-play)
+	 ("s-r s" . eradio-stop))
   :chords (("rP" . eradio-play)
-	   ("rS" . eradio-stop))))
-
+	   ("rS" . eradio-stop)))
+  
 ;; Customize
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
