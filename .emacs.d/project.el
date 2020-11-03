@@ -6,8 +6,8 @@
   )
 
 (use-package project
-  :bind (("s-p" . nil)
-	 ("s-p f" . project-or-external-find-file)
-	 ("s-p d" . project-or-exernal-find-regexp)
-	 ("s-p r" . project-query-replace-regexp)
-	 ("s-p s" . project-search)))
+  :bind (("C-c j f" . project-or-external-find-file)
+	 ("C-c j d" . project-or-exernal-find-regexp)
+	 ("C-c j r" . project-query-replace-regexp)
+	 ("C-c j s" . project-search)
+	 ("C-c j o" . olav-open-project)))

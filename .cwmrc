@@ -12,6 +12,7 @@ htile 65 # useful for reading books and programming along
 # moveamount 20px
 
 command zathura zathura
+command emacs emacs
 
 # The bindings are listed in /roughly/ the same order as the default bindings list in cwm(1)
 unbind-key all
