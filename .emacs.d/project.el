@@ -1,7 +1,9 @@
 ;; project.el – project management sans projectile
 (defun olav-open-project ()
   (interactive)
-  (dired (completing-read "Project: " (directory-files "~/Projects") nil t)))
+  (cd (completing-read "Project: " (append '("/home/olav/.emacs.d") (directory-files "~/Projects" t)) nil))
+  (call-interactively 'find-file)
+  )
 
 (use-package project
   :bind (("s-p" . nil)
