@@ -8,3 +8,4 @@
   :config (which-key-mode))
 ;; remove all trailing whitespace and newlines, handy before commiting.
 (global-set-key (kbd "C-c d") 'delete-trailing-whitespace)
+(global-set-key (kbd "C-c f") 'delete-file)

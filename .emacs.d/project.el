@@ -1,10 +1,13 @@
-;; project.el – project management ~sans~ with projectile
-(defun olav-open-project ()
-  (interactive)
-  (cd (completing-read "Project: " (append '("/home/olav/.emacs.d") (directory-files "~/Projects" t)) nil))
-  (call-interactively 'find-file))
+;; project.el – project and workspace management with projectile and perspective
+(use-package perspective
+  :init (setq persp-mode-prefix-key (kbd "C-c k"))
+  :config (persp-mode))
+
+(use-package persp-projectile
+  :after perspective)
 
 (use-package projectile
+  :after persp-projectile
   :init
   (setq projectile-project-search-path '("~/Projects"))
   (setq projectile-completion-system 'default) ;; Use selectrum completion
@@ -16,4 +19,6 @@
   (projectile-mode +1)
   :bind (("C-c j" . projectile-command-map)
 	 (:map projectile-command-map
-	       ("A" . projectile-add-known-project))))
+	       ("A" . projectile-add-known-project)
+	       ("p" . projectile-persp-switch-project))))
+
