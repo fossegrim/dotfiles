@@ -11,4 +11,5 @@
 (load-file "~/.emacs.d/compile.el")
 (load-file "~/.emacs.d/shell.el")
 (load-file "~/.emacs.d/misc.el")
+(load-file "~/.emacs.d/modus.el")
 (load-file "~/.emacs.d/custom.el")
