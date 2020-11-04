@@ -8,5 +8,6 @@
 (load-file "~/.emacs.d/eradio.el")
 (load-file "~/.emacs.d/littering.el")
 (load-file "~/.emacs.d/org.el")
+(load-file "~/.emacs.d/shell.el")
 (load-file "~/.emacs.d/misc.el")
 (load-file "~/.emacs.d/custom.el")
