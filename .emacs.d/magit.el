@@ -1,5 +1,7 @@
 ;; magit.el – configurations for the magit git interface
 (use-package magit
+  :setq
+  (setq magit-save-repository-buffers nil) ;; don't prompt to save files when running magit commands
   :bind (;; 20%
 	 ("C-c k k" . magit)
 	 ;; 80%
