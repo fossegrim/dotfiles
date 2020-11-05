@@ -1,0 +1,5 @@
+;; ignore autocreated files
+elpa
+projectile-bookmarks.eld
+transient
+var
