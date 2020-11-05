@@ -3,4 +3,4 @@
   (interactive)
   (eww-open-file (buffer-file-name (current-buffer))))
 (global-set-key (kbd "C-c w")  'olav-eww-browse-url-of-file)
-(global-set-key (kbd "C-c s")  'browse-url-of-file) ;; s-afari
+(global-set-key (kbd "C-c W")  'browse-url-of-file) ;; s-afari
