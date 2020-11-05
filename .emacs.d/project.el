@@ -19,6 +19,7 @@
   (projectile-mode +1)
   :bind (("C-c j" . projectile-command-map)
 	 (:map projectile-command-map
+	       ("s" . projectile-grep) ;; just use grep
 	       ("A" . projectile-add-known-project)
 	       ("p" . projectile-persp-switch-project))))
 
