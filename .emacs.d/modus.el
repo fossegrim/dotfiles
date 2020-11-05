@@ -10,15 +10,10 @@
   :init
   (use-package modus-operandi-theme) ;; centralize the configurations
   :config
-  (load-theme 'modus-operandi t t)
-  (run-at-time "05:00" (* 60 60 24)
-	       (lambda ()
-		 (enable-theme 'modus-operandi)))
-  
   (load-theme 'modus-vivendi t t)
-  (run-at-time "20:00" (* 60 60 24)
-	       (lambda ()
-		 (enable-theme 'modus-vivendi)))
+  (load-theme 'modus-operandi t t)
+
+  (load-theme 'modus-vivendi t)
 
   (defun olav-modus-themes-toggle ()
     "Toggle between `modus-operandi' and `modus-vivendi' themes."
