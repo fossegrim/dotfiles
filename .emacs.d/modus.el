@@ -30,3 +30,9 @@
       (disable-theme 'modus-vivendi)
       (load-theme 'modus-operandi t)))
   :bind ("C-c t" . 'olav-modus-themes-toggle))
+
+;; Remove gui clutter
+(menu-bar-mode -1)
+(toggle-scroll-bar -1)
+(tool-bar-mode -1)
+(set-fringe-mode 0)
