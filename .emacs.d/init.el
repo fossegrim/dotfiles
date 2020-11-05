@@ -1,6 +1,7 @@
 ;; init.el – my lovely emacs configuration :^)
 (load-file "~/.emacs.d/package.el")
 (load-file "~/.emacs.d/darwin.el")
+(load-file "~/.emacs.d/path.el")
 (load-file "~/.emacs.d/selectrum.el")
 (load-file "~/.emacs.d/magit.el")
 (load-file "~/.emacs.d/cc-mode.el")
