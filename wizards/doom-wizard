@@ -1,5 +1,0 @@
-#!/bin/sh
-# Install doom emacs
-
-git clone --depth 1 https://github.com/hlissner/doom-emacs ~/.emacs.d || exit 1
-~/.emacs.d/bin/doom install || exit 1
