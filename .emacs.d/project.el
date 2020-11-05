@@ -14,6 +14,7 @@
   (setq projectile-indexing-method 'hybrid)
   (setq projectile-sort-order 'recently-active) ;; Sort files by recently active buffer and then recenently opened files
   (setq projectile-current-project-on-switch 'keep) ;; Include current project in project list
+  (setq projectile-use-git-grep t) ; only grep vced files in git projects
   :config
   (projectile-mode +1)
   :bind (("C-c j" . projectile-command-map)
