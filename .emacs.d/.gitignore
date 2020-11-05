@@ -1,5 +1,8 @@
 ;; ignore autocreated files
+auto-save-list
+eshell
 elpa
 projectile-bookmarks.eld
 transient
 var
+url
