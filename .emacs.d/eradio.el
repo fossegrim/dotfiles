@@ -10,7 +10,8 @@
 			  ("everything - lainon" . "https://lainon.life/radio/everything.ogg.m3u")
 			  ("swing - lainon" . "https://lainon.life/radio/swing.ogg.m3u")
 			  ("bluemars - eobm" . "http://streams.echoesofbluemars.org:8000/bluemars.m3u")
-			  ("cryosleep - eobm" . "http://streams.echoesofbluemars.org:8000/cryosleep.m3u")))
+			  ("cryosleep - eobm" . "http://streams.echoesofbluemars.org:8000/cryosleep.m3u")
+			  ("death - death.fm" . "http://death.fm/modules/Listen/MP3-hi.pls")))
   (setq eradio-player '("mpv" "--no-video" "--no-terminal"))
 
   :bind (("C-c p" . eradio-play)
