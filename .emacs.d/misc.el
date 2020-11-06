@@ -8,3 +8,8 @@
 ;; remove all trailing whitespace and newlines, handy before commiting.
 (global-set-key (kbd "C-c d") 'delete-trailing-whitespace)
 (global-set-key (kbd "C-c f") 'delete-file)
+(global-set-key (kbd "C-c F") 'rename-file)
+(defun olav-insert-file-name ()
+  (interactive)
+  (insert (read-file-name "Insert: " nil nil nil)))
+(set-default 'truncate-lines t)
