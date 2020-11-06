@@ -13,3 +13,12 @@
   (interactive)
   (insert (read-file-name "Insert: " nil nil nil)))
 (set-default 'truncate-lines t)
+;; open pdfs in xdg-open/open
+;; C-c j F (projectile-find-file-in-known-projects) .pdf$ to open a pdf from any project
+(use-package openwith
+  :init
+  (setq openwith-associations (if (string-equal system-type "darwin")
+				  '(("\\.pdf\\'" "open" (file)))
+				'(("\\.pdf\\'" "zathura" (file)))))
+  :config
+  (openwith-mode t))
