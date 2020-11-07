@@ -15,4 +15,5 @@
 (load-file "~/.emacs.d/modus.el")
 (load-file "~/.emacs.d/browse.el")
 (load-file "~/.emacs.d/markdown.el")
+(load-file "~/.emacs.d/games.el")
 (load-file "~/.emacs.d/custom.el")
