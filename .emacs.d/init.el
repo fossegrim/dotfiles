@@ -17,4 +17,5 @@
 (load-file "~/.emacs.d/markdown.el")
 (load-file "~/.emacs.d/irc.el")
 (load-file "~/.emacs.d/games.el")
+(load-file "~/.emacs.d/dired.el")
 (load-file "~/.emacs.d/custom.el")
