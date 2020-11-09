@@ -3,12 +3,12 @@
 (use-package erc
   :init
   (load "~/.emacs.d/erc-auth.el")
-  (setq erc-nick "fossegrim")
-  (setq erc-server "irc.freenode.net")
-  (setq erc-port 6667)
-  (setq erc-part-reason "email me at {mail,post,spam}@olavfosse.no")
   (setq erc-autojoin-channels-alist '(("freenode.net" "#emacs" "#erc")))
   :config
+  ;; I use IRC for ephemeral communications and therefore do not utilize notifications or a bouncer.
+  ;; Therefore I refer people to my email in case they need to contact me when I am not present.
+  (defun erc-quit/part-reason-default ()
+    "email me at {mail,post,spam}@olavfosse.no")
   (defun olav-erc ()
     (interactive)
     (persp-switch "irc")
