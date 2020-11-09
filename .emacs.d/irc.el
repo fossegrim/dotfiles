@@ -3,7 +3,32 @@
 (use-package erc
   :init
   (load "~/.emacs.d/erc-auth.el")
-  (setq erc-autojoin-channels-alist '(("freenode.net" "#emacs" "#erc")))
+  (setq erc-autojoin-channels-alist
+	'(("freenode.net"
+	   ;; friends
+	   "#distrotube"
+	   "#tripcode"
+	   ;; emacs
+	   "#emacs"
+	   "#erc"
+	   "#org-mode"
+	   ;; web
+	   "#web"
+	   "#html"
+	   "#css"
+	   "##javascript"
+	   "##typescript"
+	   "#reactjs"
+	   "#graphql"
+	   "#node.js"
+	   "#socket.io"
+	   ;; unix/cs/systems
+	   "#openbsd"
+	   "##c"
+	   "##c++"
+	   "##sqlite"
+	   "##algorithms"
+	   )))
   :config
   ;; I use IRC for ephemeral communications and therefore do not utilize notifications or a bouncer.
   ;; Therefore I refer people to my email in case they need to contact me when I am not present.
