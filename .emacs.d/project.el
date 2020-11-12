@@ -1,19 +1,10 @@
-;; project.el – project and workspace management with projectile and perspective
-(use-package perspective
-  :init (setq persp-mode-prefix-key (kbd "C-c k"))
-  :config (persp-mode))
-
-(use-package persp-projectile
-  :after perspective)
-
+;; project.el – project and workspace management with projectile
 (use-package projectile
-  :after persp-projectile
   :init
   (setq projectile-project-search-path '("~/Projects"))
   (setq projectile-completion-system 'default) ;; Use selectrum completion
   (setq projectile-indexing-method 'hybrid)
   (setq projectile-sort-order 'recently-active) ;; Sort files by recently active buffer and then recenently opened files
-  (setq projectile-current-project-on-switch 'keep) ;; Include current project in project list
   (setq projectile-use-git-grep t) ; only grep vced files in git projects
   (setq projectile-switch-project-action 'projectile-dired)
   :config
@@ -21,6 +12,4 @@
   :bind (("C-c j" . projectile-command-map)
 	 (:map projectile-command-map
 	       ("s" . projectile-grep) ;; just use grep
-	       ("A" . projectile-add-known-project)
-	       ("p" . projectile-persp-switch-project))))
-
+	       ("A" . projectile-add-known-project))))
