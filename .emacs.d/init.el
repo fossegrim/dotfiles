@@ -18,6 +18,7 @@
 (load-file "~/.emacs.d/irc.el")
 (load-file "~/.emacs.d/games.el")
 (load-file "~/.emacs.d/dired.el")
+(load-file "~/.emacs.d/docs.el")
 (load-file "~/.emacs.d/lines.el")
 (load-file "~/.emacs.d/rss.el")
 (load-file "~/.emacs.d/web.el")
