@@ -24,3 +24,6 @@
 				'(("\\.pdf\\'" "zathura" (file)))))
   :config
   (openwith-mode t))
+;; Display comumn number
+;; Useful for maintaining arbitrary column limits
+(setq column-number-mode t)
