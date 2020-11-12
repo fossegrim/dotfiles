@@ -19,4 +19,5 @@
 (load-file "~/.emacs.d/games.el")
 (load-file "~/.emacs.d/dired.el")
 (load-file "~/.emacs.d/rss.el")
+(load-file "~/.emacs.d/web.el")
 (load-file "~/.emacs.d/custom.el")
