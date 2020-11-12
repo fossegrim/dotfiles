@@ -1,7 +1,9 @@
 ;; misc.el – miscelaneus configurations
 (fset 'yes-or-no-p 'y-or-n-p)
 ;; a comfy isearch replacement, unfortunately it doesn't do search-and-replace
+;; I no longer use ctrlf since it feels kind of uncomplete. There is no search-and-replace and it doesn't work which info's seach system isearch is less pleasant than ctrlf at it's best, but i prefer the consistency
 (use-package ctrlf
+  :if nil
   :config (ctrlf-mode +1))
 (use-package which-key
   :config (which-key-mode))
