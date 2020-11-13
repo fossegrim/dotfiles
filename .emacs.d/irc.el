@@ -42,6 +42,12 @@
          :nick "fossegrim"
 	 :password olav-freenode-password ; nice try, it's not vc'ed
 	 :full-name "Olav Fosse"))
+  (defun olav-erc-visne ()
+    (interactive)
+    (erc-ssl :server "vi.sne.jp"
+	 :port "6697"
+         :nick "fossegrim"
+	 :full-name "Olav Fosse"))
   
   :bind (("C-c l i" . 'olav-erc-freenode)
 	 (:map erc-mode-map
