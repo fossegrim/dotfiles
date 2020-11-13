@@ -27,3 +27,5 @@
 ;; Display comumn number
 ;; Useful for maintaining arbitrary column limits
 (setq column-number-mode t)
+;; Don't use scroll-bar
+(set-scroll-bar-mode nil)
