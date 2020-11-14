@@ -50,9 +50,14 @@
 	 :port "6697"
          :nick "fossegrim"
 	 :full-name "Olav Fosse"))
+  (defun olav-erc-nebula ()
+    (interactive)
+    (erc-ssl :server "irc.nebulacentre.net"
+	 :port "6697"
+	 :nick "fossegrim"
+	 :full-name "Olav Fosse"))
   
   :bind (("C-c l i" . 'olav-erc-freenode)
 	 (:map erc-mode-map
 	       ("RET" . nil)
-	       ("C-c <C-return>" . 'erc-send-current-line)
-	       )))
+	       ("C-c <C-return>" . 'erc-send-current-line))))
