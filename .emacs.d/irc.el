@@ -17,18 +17,20 @@
 	   ;; "#html"
 	   ;; "#css"
 	   ;; "##javascript"
-   	   "##typescript"
+   	   ;; "##typescript"
 	   ;; "#reactjs"
 	   ;; "#graphql"
 	   ;; "#node.js"
 	   ;; "#socket.io"
 	   ;;; unix/cs/systems
-   	   "#openbsd"
-   	   "##c"
+   	   ;; "#openbsd"
+   	   ;; "##c"
 	   ;; "##c++"
 	   ;; "##sqlite"
 	   ;; "##algorithms"
-  	   )))
+  	   )
+	  ("sne.jp" "#visne")
+	  ("nebulacentre.net" "#general")))
   :config
   ;; I use IRC for ephemeral communications only and therefore do not
   ;; utilize notifications or a bouncer. I refer people to my email in
