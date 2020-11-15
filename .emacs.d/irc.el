@@ -47,17 +47,26 @@
   (defun olav-erc-visne ()
     (interactive)
     (erc-ssl :server "vi.sne.jp"
-	 :port "6697"
-         :nick "fossegrim"
-	 :full-name "Olav Fosse"))
+	     :port "6697"
+             :nick "fossegrim"
+	     :full-name "Olav Fosse"))
   (defun olav-erc-nebula ()
     (interactive)
     (erc-ssl :server "irc.nebulacentre.net"
-	 :port "6697"
-	 :nick "fossegrim"
-	 :full-name "Olav Fosse"))
+	     :port "6697"
+	     :nick "fossegrim"
+	     :full-name "Olav Fosse"))
+  (defun olav-erc-hl ()
+    (interactive)
+    (erc-ssl :server "irc.hlirc.net"
+             :port "6697"
+	     :nick "fossegrim"
+	     :full-name "Olav Fosse"))
   
-  :bind (("C-c l i" . 'olav-erc-freenode)
+  :bind (("C-c i f" . 'olav-erc-freenode)
+	 ("C-c i v" . 'olav-erc-visne)
+	 ("C-c i n" . 'olav-erc-nebula)
+	 ("C-c i h" . 'olav-erc-hl)
 	 (:map erc-mode-map
 	       ("RET" . nil)
 	       ("C-c <C-return>" . 'erc-send-current-line))))
