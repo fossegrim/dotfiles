@@ -9,7 +9,7 @@
    	   "#distrotube"
    	   "#tripcode"
 	   ;;; emacs
-   	   "#emacs"
+   	   ;; "#emacs"
 	   ;; "#erc"
 	   ;; "#org-mode"
 	   ;;; web
@@ -62,11 +62,19 @@
              :port "6697"
 	     :nick "fossegrim"
 	     :full-name "Olav Fosse"))
+
+  (defun olav-erc-all ()
+    (interactive)
+    (olav-erc-freenode)
+    (olav-erc-visne)
+    (olav-erc-nebula)
+    (olav-erc-hl))
   
   :bind (("C-c i f" . 'olav-erc-freenode)
 	 ("C-c i v" . 'olav-erc-visne)
 	 ("C-c i n" . 'olav-erc-nebula)
 	 ("C-c i h" . 'olav-erc-hl)
+	 ("C-c i A" . 'olav-erc-all)
 	 (:map erc-mode-map
 	       ("RET" . nil)
 	       ("C-c <C-return>" . 'erc-send-current-line))))
