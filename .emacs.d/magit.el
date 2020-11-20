@@ -1,6 +1,5 @@
 ;; magit.el – configurations for the magit git interface
 (use-package magit
-  :load-path "~/Projects/magit/lisp"
   :init
   (setq magit-clone-default-directory "~/Projects/")
   (setq magit-clone-set-remote.pushDefault t) ; set it without prompting
