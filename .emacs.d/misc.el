@@ -29,3 +29,5 @@
 (setq column-number-mode t)
 ;; Don't use scroll-bar
 (set-scroll-bar-mode nil)
+;; If I get distracted by irc, i like to hide the modeline
+(use-package hide-mode-line)
