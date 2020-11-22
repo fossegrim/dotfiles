@@ -11,7 +11,8 @@
 			  ("swing - lainon" . "https://lainon.life/radio/swing.ogg.m3u")
 			  ("bluemars - eobm" . "http://streams.echoesofbluemars.org:8000/bluemars.m3u")
 			  ("cryosleep - eobm" . "http://streams.echoesofbluemars.org:8000/cryosleep.m3u")
-			  ("death - death.fm" . "http://death.fm/modules/Listen/MP3-hi.pls")))
+			  ("death - death.fm" . "http://death.fm/modules/Listen/MP3-hi.pls")
+			  ("4059 - 0xfdb.fm"  . "https://music.taro.0xfdb.xyz:8443/stream.flac")))
   (setq eradio-player '("mpv" "--no-video" "--no-terminal"))
 
   :bind (("C-c p" . eradio-play)
