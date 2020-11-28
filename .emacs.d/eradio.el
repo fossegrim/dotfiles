@@ -12,7 +12,8 @@
 			  ("bluemars - eobm" . "http://streams.echoesofbluemars.org:8000/bluemars.m3u")
 			  ("cryosleep - eobm" . "http://streams.echoesofbluemars.org:8000/cryosleep.m3u")
 			  ("death - death.fm" . "http://death.fm/modules/Listen/MP3-hi.pls")
-			  ("4059 - 0xfdb.fm"  . "https://music.taro.0xfdb.xyz:8443/stream.flac")))
+			  ("4059 - 0xfdb.fm"  . "https://music.taro.0xfdb.xyz:8443/stream.flac")
+			  ("l's theme (10 hours) - death note" . "https://www.youtube.com/watch?v=bAr1a6zux_8")))
   (setq eradio-player '("mpv" "--no-video" "--no-terminal"))
 
   :bind (("C-c p" . eradio-play)
