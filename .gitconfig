@@ -1,3 +1,6 @@
+[alias]
+	# list all contributors by number of commits
+	contributors = shortlog -s -n --all --no-merges
 [core]
 	editor = vi
 [push]
