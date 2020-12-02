@@ -24,7 +24,7 @@
           (load-theme 'modus-vivendi t))
       (disable-theme 'modus-vivendi)
       (load-theme 'modus-operandi t)))
-  :bind ("C-c t" . 'olav-modus-themes-toggle))
+  :bind ("C-c t m" . 'olav-modus-themes-toggle))
 
 ;; Remove gui clutter
 (menu-bar-mode -1)
