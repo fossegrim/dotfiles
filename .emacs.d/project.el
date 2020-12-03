@@ -17,5 +17,6 @@
   :bind (("C-c j" . projectile-command-map)
 	 (:map projectile-command-map
 	       ("s" . projectile-grep) ;; just use grep
-	       ("A" . projectile-add-known-project))))
+	       ("A" . projectile-add-known-project)
+	       ("R" . projectile-remove-known-project) ; overwrites, projectile-regenerate-tags
 	       ("x T" . olav-projectile-external-terminal))))
