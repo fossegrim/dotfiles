@@ -24,3 +24,8 @@
 (load-file "~/.emacs.d/web.el")
 (load-file "~/.emacs.d/custom.el")
 (load-file "~/.emacs.d/toggle.el")
+
+;; use weekly agenda as splash screen / default buffer
+(setq inhibit-splash-screen t)
+(org-agenda-list)
+(delete-other-windows)
