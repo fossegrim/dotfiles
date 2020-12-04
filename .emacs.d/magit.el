@@ -18,3 +18,6 @@
     'magit-tag
     "-u"
     '(magit-tag:--message)))
+(use-package gitignore-mode)
+(use-package gitattributes-mode)
+(use-package gitconfig-mode)
