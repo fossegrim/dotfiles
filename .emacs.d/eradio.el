@@ -16,5 +16,6 @@
 			  ("4059 - 0xfdb.fm"  . "https://music.taro.0xfdb.xyz:8443/stream.flac")
 			  ("classical - sonatica.fm" . "https://orion.shoutca.st/tunein/sonatica.pls")
 			  ("l's theme (10 hours) - death note" . "https://www.youtube.com/watch?v=bAr1a6zux_8"))
+	eradio-current-channel "https://somafm.com/defcon256.pls")
   :bind (("C-c R" . eradio-play)
 	 ("C-c r" . eradio-toggle)))
