@@ -6,8 +6,8 @@
   (setq erc-autojoin-channels-alist
    	'(("freenode.net"
    	   ;;; friends
-   	   "#distrotube"
-   	   "#tripcode"
+   	   ;; "#distrotube"
+   	   ;; "#tripcode"
 	   ;;; emacs
    	   ;; "#emacs"
 	   ;; "#erc"
