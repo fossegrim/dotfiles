@@ -29,7 +29,6 @@
 	   ;; "##sqlite"
 	   ;; "##algorithms"
   	   )
-	  ("sne.jp" "#visne")
 	  ("nebulacentre.net" "#general")))
   :config
   ;; I use IRC for ephemeral communications only and therefore do not
@@ -44,12 +43,6 @@
          :nick "fossegrim"
 	 :password olav-freenode-password ; nice try, it's not vc'ed
 	 :full-name "Olav Fosse"))
-  (defun olav-erc-visne ()
-    (interactive)
-    (erc-ssl :server "vi.sne.jp"
-	     :port "6697"
-             :nick "fossegrim"
-	     :full-name "Olav Fosse"))
   (defun olav-erc-nebula ()
     (interactive)
     (erc-ssl :server "irc.nebulacentre.net"
@@ -66,12 +59,10 @@
   (defun olav-erc-all ()
     (interactive)
     (olav-erc-freenode)
-    (olav-erc-visne)
     (olav-erc-nebula)
     (olav-erc-hl))
   
   :bind (("C-c i f" . 'olav-erc-freenode)
-	 ("C-c i v" . 'olav-erc-visne)
 	 ("C-c i n" . 'olav-erc-nebula)
 	 ("C-c i h" . 'olav-erc-hl)
 	 ("C-c i A" . 'olav-erc-all)
