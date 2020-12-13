@@ -6,27 +6,11 @@ alias is-darwin='[ "$(uname)" = Darwin ]'
 
 is-ksh && alias ..='cd ..'
 
-alias ..g='cd "$(git rev-parse --show-toplevel)"'
-alias p=pwd
-alias c=cd
-alias g=git-or-hub
-alias m='mkdir -p'
-alias r='rm -d'
-alias v="$EDITOR"
-alias l="ls -a"
 
 alias un-tar-gz='tar -xzf'
 
-compile() { clang -std=c17 -Wall -Wextra -pedantic "$@"; }
-pdf() { zathura "$@" &> /dev/null; }
-
 alias qwerty='setxkbmap -layout no'
 alias dvorak='setxkbmap -layout no -variant dvorak'
-
-# ---PATH---
-# ~/bin is for binaries
-# ~/sh is for scripts
-export PATH="$HOME/sh:$HOME/bin:$PATH"
 
 # ---EDITOR---
 # Setting EDITOR to vi makes the use vi-mode.
