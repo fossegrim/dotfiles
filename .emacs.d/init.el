@@ -24,6 +24,7 @@
 (load-file "~/.emacs.d/custom.el")
 (load-file "~/.emacs.d/toggle.el")
 (load-file "~/.emacs.d/kaomoji.el")
+(load-file "~/.emacs.d/go.el")
 
 ;; use weekly agenda as splash screen / default buffer
 (setq inhibit-splash-screen t)
