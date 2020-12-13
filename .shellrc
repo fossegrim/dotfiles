@@ -14,10 +14,11 @@ alias un-tar-gz='tar -xzf'
 (is-openbsd || is-linux) && alias dvorak='setxkbmap -layout no -variant dvorak'
 
 # ---EDITOR---
-# Setting EDITOR to vi makes the use vi-mode.
+# Setting EDITOR to vi makes ksh use vi-mode.
 export EDITOR=vi
 # To prevent this the editor mode is explicitly set to emacs.
 is-ksh && set -o emacs
+# Also use vi for fc command
 is-ksh && export FCEDIT="$EDITOR"
 
 # ---PSX---
