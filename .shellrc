@@ -40,6 +40,8 @@ HISTSIZE=20000
 is-darwin && export PATH="/usr/local/opt/curl/bin:$PATH:$HOME/bin"
 # Add "npm install -g" directory to path
 is-npm && export PATH="$PATH:$HOME/node/bin"
+# Add /usr/local/go/bin to path, this is unnecesarry on macos because the macos go installer adds it automatically
+! is-darwin && export PATH=$PATH:/usr/local/go/bin
 # Add "go get" directory to path
 is-go && export PATH="$PATH:$HOME/go/bin"
 # Add android emulator /stuff/ to path
