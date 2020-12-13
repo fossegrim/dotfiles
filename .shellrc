@@ -2,6 +2,7 @@
 alias is-ksh='[ "$0" = ksh ]' # maybe escape
 alias is-zsh='[ "$0" = zsh ]' # maybe escape
 alias is-openbsd='[ "$(uname)" = OpenBSD ]'
+alias is-linux='[ "$(uname)" = Linux ]'
 alias is-darwin='[ "$(uname)" = Darwin ]'
 
 is-ksh && alias ..='cd ..'
@@ -9,8 +10,8 @@ is-ksh && alias ..='cd ..'
 
 alias un-tar-gz='tar -xzf'
 
-alias qwerty='setxkbmap -layout no'
-alias dvorak='setxkbmap -layout no -variant dvorak'
+(is-openbsd || is-linux) && alias qwerty='setxkbmap -layout no'
+(is-openbsd || is-linux) && alias dvorak='setxkbmap -layout no -variant dvorak'
 
 # ---EDITOR---
 # Setting EDITOR to vi makes the use vi-mode.
