@@ -26,6 +26,11 @@
 (load-file "~/.emacs.d/kaomoji.el")
 (load-file "~/.emacs.d/go.el")
 
+;; Pressing s-` on my mac, doesn't actually call the command which is bound to s-`
+;; Therefore i unbind it
+(global-set-key (kbd "s-`") nil)
+;; and bind it to s-' instead
+(global-set-key (kbd "s-'") 'other-frame) "s-`" 
 ;; use weekly agenda as splash screen / default buffer
 (setq inhibit-splash-screen t)
 (org-agenda-list)
