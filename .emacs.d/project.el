@@ -1,7 +1,11 @@
 ;; project.el – project and workspace management with projectile
 (use-package projectile
   :init
-  (setq projectile-project-search-path '("~/Projects"))
+  (setq projectile-project-search-path (append
+					;; ~/vc/forge/{user,organization}/repo
+					(directory-files "~/vc/github.com" 1)
+					(directory-files "~/vc/gitlab.com" 1)
+					(directory-files "~/vc/notabug.org" 1)))
   (setq projectile-completion-system 'default) ;; Use selectrum completion
   (setq projectile-indexing-method 'hybrid)
   (setq projectile-sort-order 'recently-active) ;; Sort files by recently active buffer and then recenently opened files

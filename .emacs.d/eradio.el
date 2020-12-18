@@ -1,6 +1,6 @@
 ;; eradio.el – eradio configuration
 (use-package eradio
-  :load-path "~/Projects/eradio"
+  :load-path "~/vc/github.com/fossegrim/eradio"
   :init
   (setq eradio-channels '(("def con - soma fm" . "https://somafm.com/defcon256.pls")
 			  ("metal - soma fm" . "https://somafm.com/metal130.pls")

@@ -2,7 +2,7 @@
 (use-package org
   :if (string-equal system-type "darwin")
   :init
-  (setq org-agenda-files '("~/Projects/org/todo.org")
+  (setq org-agenda-files '("~/vc/github.com/fossegrim/org/todo.org")
 	org-todo-keywords '("TODO" "|" "DONE" "CANCELLED"))
   :config
   (require 'org-tempo)
