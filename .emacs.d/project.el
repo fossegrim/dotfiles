@@ -1,11 +1,15 @@
 ;; project.el – project and workspace management with projectile
 (use-package projectile
   :init
+  (defun olav-mkdir (DIRECTORY)
+    "Create DIRECTORY, and its parents, if it does not already exist. Return directory name."
+    (or (file-exists-p DIRECTORY) (make-directory DIRECTORY))
+    DIRECTORY)
   (setq projectile-project-search-path (append
 					;; ~/vc/forge/{user,organization}/repo
-					(directory-files "~/vc/github.com" 1)
-					(directory-files "~/vc/gitlab.com" 1)
-					(directory-files "~/vc/notabug.org" 1)))
+					(directory-files (olav-mkdir "~/vc/github.com") 1)
+					(directory-files (olav-mkdir "~/vc/gitlab.com") 1)
+					(directory-files (olav-mkdir "~/vc/notabug.org") 1)
   (setq projectile-completion-system 'default) ;; Use selectrum completion
   (setq projectile-indexing-method 'hybrid)
   (setq projectile-sort-order 'recently-active) ;; Sort files by recently active buffer and then recenently opened files
