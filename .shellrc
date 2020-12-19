@@ -17,6 +17,12 @@ alias un-tar-gz='tar -xzf'
 
 (is-openbsd || is-linux) && alias qwerty='setxkbmap -layout no'
 (is-openbsd || is-linux) && alias dvorak='setxkbmap -layout no -variant dvorak'
+# this takes a couple seconds since it recompiles the application every time, that is okay.
+alias midimap="go run ~/vc/github.com/fossegrim/midimap/midimap.go"
+taiko() {
+	(is-openbsd || is-linux) && chromium "--app=https://taiko.bui.pm"
+	is-darwin && open -n "https//taiko.bui.pm"
+}
 
 # ---EDITOR---
 # Setting EDITOR to vi makes ksh use vi-mode.
