@@ -11,7 +11,7 @@
 					(directory-files (olav-mkdir "~/vc/gitlab.com") 1)
 					(directory-files (olav-mkdir "~/vc/notabug.org") 1)
 					;; ~/vc/forge/repo
-					'((olav-mkdir "~/vc/git.suckless.org"))))
+					(list (olav-mkdir "~/vc/git.suckless.org"))))
   (setq projectile-completion-system 'default) ;; Use selectrum completion
   (setq projectile-indexing-method 'hybrid)
   (setq projectile-sort-order 'recently-active) ;; Sort files by recently active buffer and then recenently opened files
