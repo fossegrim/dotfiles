@@ -5,14 +5,19 @@
     "Create DIRECTORY, and its parents, if it does not already exist. Return directory name."
     (or (file-exists-p DIRECTORY) (make-directory DIRECTORY))
     DIRECTORY)
-  (setq projectile-project-search-path (append
-					;; ~/vc/forge/{user,organization}/repo
-					(directory-files (olav-mkdir "~/vc/github.com") 1)
-					(directory-files (olav-mkdir "~/vc/gitlab.com") 1)
-					(directory-files (olav-mkdir "~/vc/notabug.org") 1)
-					(directory-files (olav-mkdir "~/vc/gitlab.haskell.org") 1)
-					;; ~/vc/forge/repo
-					(list (olav-mkdir "~/vc/git.suckless.org"))))
+  (defun olav-projectile-update-search-path ()
+    (interactive)
+    (setq projectile-project-search-path (append
+					  ;; ~/vc/forge/{user,organization}/repo
+					  (directory-files (olav-mkdir "~/vc/github.com") 1)
+					  (directory-files (olav-mkdir "~/vc/gitlab.com") 1)
+					  (directory-files (olav-mkdir "~/vc/notabug.org") 1)
+					  (directory-files (olav-mkdir "~/vc/gitlab.haskell.org") 1)
+					  (directory-files (olav-mkdir "~/vc/git.sr.ht") 1)
+					  ;; ~/vc/forge/repo
+					  (list (olav-mkdir "~/vc/git.suckless.org"))
+					  (list (olav-mkdir "~/vc/git.sv.gnu.org"))))
+  (olav-projectile-update-search-path)
   (setq projectile-completion-system 'default) ;; Use selectrum completion
   (setq projectile-indexing-method 'hybrid)
   (setq projectile-sort-order 'recently-active) ;; Sort files by recently active buffer and then recenently opened files
