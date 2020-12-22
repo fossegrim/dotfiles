@@ -16,7 +16,7 @@
 					  (directory-files (olav-mkdir "~/vc/git.sr.ht") 1)
 					  ;; ~/vc/forge/repo
 					  (list (olav-mkdir "~/vc/git.suckless.org"))
-					  (list (olav-mkdir "~/vc/git.sv.gnu.org"))))
+					  (list (olav-mkdir "~/vc/git.sv.gnu.org")))))
   (olav-projectile-update-search-path)
   (setq projectile-completion-system 'default) ;; Use selectrum completion
   (setq projectile-indexing-method 'hybrid)
