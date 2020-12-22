@@ -11,7 +11,7 @@
 (load-file "~/.emacs.d/org.el")
 (load-file "~/.emacs.d/compile.el")
 (load-file "~/.emacs.d/misc.el")
-(load-file "~/.emacs.d/modus.el")
+;; (load-file "~/.emacs.d/modus.el")
 (load-file "~/.emacs.d/browse.el")
 (load-file "~/.emacs.d/markdown.el")
 (load-file "~/.emacs.d/irc.el")
