@@ -9,3 +9,4 @@
 (global-set-key (kbd "C-c t d") 'display-line-numbers-mode)
 (global-set-key (kbd "C-c t t") 'toggle-truncate-lines)
 (global-set-key (kbd "C-c t b") 'tool-bar-mode)
+(global-set-key (kbd "C-c t o") 'overwrite-mode) ; I always enable this by accident haha
