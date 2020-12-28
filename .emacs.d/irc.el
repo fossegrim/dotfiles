@@ -29,6 +29,14 @@
 	   ;; "##sqlite"
 	   ;; "##algorithms"
   	   )
+	  ("sne.jp" "#visne")
+	  ("irc.pine64.org"
+	   ;; General
+	   "#pine-community"
+	   "#OffTopic" 			;/list wrote it with this casing
+	   ;; My board (rockpro64 2gb)
+	   "#rock64")
+
 	  ("nebulacentre.net" "#general")))
   :config
   ;; I use IRC for ephemeral communications only and therefore do not
@@ -43,6 +51,12 @@
          :nick "fossegrim"
 	 :password olav-freenode-password ; nice try, it's not vc'ed
 	 :full-name "Olav Fosse"))
+  (defun olav-erc-visne ()
+    (interactive)
+    (erc-ssl :server "vi.sne.jp"
+	     :port "6697"
+             :nick "fossegrim"
+	     :full-name "Olav Fosse"))
   (defun olav-erc-nebula ()
     (interactive)
     (erc-ssl :server "irc.nebulacentre.net"
@@ -55,16 +69,25 @@
              :port "6697"
 	     :nick "fossegrim"
 	     :full-name "Olav Fosse"))
-
+  (defun olav-erc-pine64 ()
+    (interactive)
+    (erc-ssl :server "irc.pine64.org"
+	     :port "6697"
+             :nick "fossegrim"
+	     :full-name "Olav Fosse"))
   (defun olav-erc-all ()
     (interactive)
     (olav-erc-freenode)
+    (olav-erc-visne)
     (olav-erc-nebula)
-    (olav-erc-hl))
+    (olav-erc-hl)
+    (olav-erc-pine64))
   
   :bind (("C-c i f" . 'olav-erc-freenode)
+	 ("C-c i v" . 'olav-erc-visne)
 	 ("C-c i n" . 'olav-erc-nebula)
 	 ("C-c i h" . 'olav-erc-hl)
+	 ("C-c i p" . 'olav-erc-pine64)
 	 ("C-c i A" . 'olav-erc-all)
 	 (:map erc-mode-map
 	       ("RET" . nil)
