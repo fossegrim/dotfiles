@@ -1,7 +1,6 @@
 (when (not (package-installed-p 'magit)) (package-install 'magit))
  
-(define-key xah-fly-leader-key-map (kbd "v") 'magit-status)
-(define-key xah-fly-leader-key-map (kbd "V") 'magit-dispatch)
+(define-key xah-fly-leader-key-map (kbd "8") 'magit-status)
 
 ;; Enter insert mode when opening magit
 (add-hook 'magit-status-mode-hook 'xah-fly-insert-mode-activate)
