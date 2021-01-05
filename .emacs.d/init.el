@@ -25,6 +25,7 @@
 (load-file "~/.emacs.d/toggle.el")
 (load-file "~/.emacs.d/kaomoji.el")
 (load-file "~/.emacs.d/go.el")
+(load-file "~/.emacs.d/fx.el")
 
 ;; Pressing s-` on my mac, doesn't actually call the command which is bound to s-`
 ;; Therefore i unbind it
