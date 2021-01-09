@@ -3,6 +3,11 @@
 ;; The keybindings found here are generally inspired by the default keybindings, but more pleasant.
 (define-prefix-command 'olav-pedal-map)
 (global-set-key (kbd "<f7>") olav-pedal-map)
+;; olav-pedal-map replaces ctl-x-map and ctl-h-map
+(global-set-key (kbd "C-x") nil)
+(global-set-key (kbd "C-h") nil)
+;; it also replaces M-x
+(global-set-key (kbd "M-x") nil)
 
 ;; TODO make an emacs patch that adds count-buffers and count-frames analagous to count-windows to emacs source
 (defun olav-window-other-or-split-below ()
@@ -30,7 +35,8 @@
 (define-key olav-pedal-map (kbd "w") 'write-file)
 (define-key olav-pedal-map (kbd "x") 'execute-extended-command)
 (define-key olav-pedal-map (kbd ";") 'comment-line)
-(define-key olav-pedal-map (kbd "t") 'shell) ;; t is only used because it is a conveient and s is already used
+(define-key olav-pedal-map (kbd "t") 'eshell) ;; t is only used because it is a conveient and e is in use
+(define-key olav-pedal-map (kbd "i") 'info)
 
 (define-prefix-command 'olav-pedal-eval-map)
 (define-key olav-pedal-map (kbd "e") 'olav-pedal-eval-map)
@@ -44,5 +50,4 @@
 (define-key olav-pedal-help-map (kbd "c") 'describe-key-briefly)
 (define-key olav-pedal-help-map (kbd "k") 'describe-key)
 (define-key olav-pedal-help-map (kbd "v") 'describe-variable)
-
 
