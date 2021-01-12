@@ -6,6 +6,14 @@
 (load-file "~/.emacs.d/magit.el")
 (load-file "~/.emacs.d/eradio.el")
 
+(defun olav-save-buffer-as-is ()
+  "Save file \"as is\", that is in read-only-mode."
+  (interactive)
+  (if buffer-read-only
+      (save-buffer)
+    (read-only-mode 1)
+    (save-buffer)
+    (read-only-mode 0)))
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
