@@ -203,7 +203,18 @@ Version 2018-06-04"
   ;; If I wish to insert a newline i just use RETURN.
   (global-set-key (kbd "C-o") 'olav-window-other-or-split-below))
 
-		  
+(progn
+  (olav-install 'selectrum)
+  (selectrum-mode +1)
+  (setq selectrum-fix-minibuffer-height 15) ; Use a fixed minibuffer height
+  (global-set-key (kbd "C-c z") 'selectrum-repeat)
+
+  (olav-install 'selectrum-prescient)
+  (require 'prescient)
+  (setq prescient-history-length 1000)
+  (prescient-persist-mode +1)
+  (selectrum-prescient-mode +1))
+
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -216,7 +227,7 @@ Version 2018-06-04"
  '(inhibit-startup-screen t)
  '(package-selected-packages
    (quote
-    (modus-themes modalka eradio which-key xah-fly-keys magit go-mode))))
+    (selectrum-prescient selectrum modus-themes modalka eradio which-key xah-fly-keys magit go-mode))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
