@@ -5,6 +5,7 @@
 (load-file "~/.emacs.d/go-mode.el")
 (load-file "~/.emacs.d/magit.el")
 (load-file "~/.emacs.d/eradio.el")
+(load-file "~/.emacs.d/erc.el")
 
 (defun olav-save-buffer-as-is ()
   "Save file \"as is\", that is in read-only-mode."
