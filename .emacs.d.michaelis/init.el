@@ -193,6 +193,18 @@ Version 2018-06-04"
     (save-buffer)
     (read-only-mode 0)))
 
+(progn
+  (defun olav-window-other-or-split-below ()
+    (interactive)
+    (if (> (count-windows 0) 1)
+	(other-window 1)
+      ;; switch-to-buffer-other-window is NOT equivalent to the following two function calls, because they will always split horizontally which is not the case for switch-to-buffer-other-window.
+      (split-window-below)))
+  ;; If I wish to insert a newline i just use RETURN.
+  (global-set-key (kbd "C-o") 'olav-window-other-or-split-below))
+
+		  
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
