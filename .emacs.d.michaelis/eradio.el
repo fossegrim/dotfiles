@@ -1,9 +1,5 @@
 (when (not (package-installed-p 'eradio)) (package-install 'eradio))
 
-;; (define-key xah-fly-leader-key-map (kbd "2 t") 'eradio-toggle)
-;; (define-key xah-fly-leader-key-map (kbd "2 p") 'eradio-play)
-;; (define-key xah-fly-leader-key-map (kbd "2 s") 'eradio-stop)
-
 (setq eradio-channels '(("def con - soma fm" . "https://somafm.com/defcon256.pls")
 			  ("metal - soma fm" . "https://somafm.com/metal130.pls")
 			  ("groove salad - soma fm" . "https://somafm.com/groovesalad256.pls")
@@ -16,6 +12,11 @@
 			  ("cryosleep - eobm" . "http://streams.echoesofbluemars.org:8000/cryosleep.m3u")
 			  ("death - death.fm" . "http://death.fm/modules/Listen/MP3-hi.pls")
 			  ("4059 - 0xfdb.fm"  . "https://music.taro.0xfdb.xyz:8443/stream.flac")
-			  ("classical - sonatica.fm" . "https://orion.shoutca.st/tunein/sonatica.pls")
-			  ("l's theme (10 hours) - death note" . "https://www.youtube.com/watch?v=bAr1a6zux_8")))
+			  ("classical - sonatica.fm" . "https://orion.shoutca.st/tunein/sonatica.pls")))
 (setq eradio-player '("mpv" "--no-video" "--no-terminal"))
+
+(define-prefix-command 'olav-eradio-map)
+(global-set-key (kbd "C-c r") 'olav-eradio-map)
+(define-key olav-eradio-map (kbd "r") 'eradio-toggle)
+(define-key olav-eradio-map (kbd "p") 'eradio-play)
+(define-key olav-eradio-map (kbd "s") 'eradio-stop)
